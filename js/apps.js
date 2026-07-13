@@ -1,14 +1,13 @@
-//========================================
+//=====================================================
 // SS TELECOM MANAGEMENT SYSTEM
-// Phase 3.1
-//========================================
+// APP.JS (PART-1)
+//=====================================================
 
-
-//===============================
+//=============================
 // LIVE DATE & TIME
-//===============================
+//=============================
 
-function updateClock(){
+function updateClock() {
 
     const now = new Date();
 
@@ -20,335 +19,632 @@ function updateClock(){
 
 }
 
-setInterval(updateClock,1000);
+setInterval(updateClock, 1000);
 
 updateClock();
 
 
-//===============================
-// FLEXILOAD SAVE
-//===============================
+//=============================
+// MASTER DATA
+//=============================
 
-const saveFlexi = document.getElementById("saveFlexi");
+let data = {
 
-saveFlexi.addEventListener("click",()=>{
+    easyload: 0,
 
-    gpBalance.value="";
-    robiBalance.value="";
-    blBalance.value="";
-    airtelBalance.value="";
+    mobileBanking: 0,
 
-    alert("Flexi Load Saved Successfully");
+    productBuy: 0,
+
+    productSale: 0,
+
+    cardBuy: 0,
+
+    cardSale: 0,
+
+    barbarizeBuy: 0,
+
+    barbarizeSale: 0,
+
+    dailyProfit: 0,
+
+    monthlyProfit: 0,
+
+    totalSales: 0,
+
+    stockBalance: 0,
+
+    currentAssets: 0,
+
+    openingAmount: 30000,
+
+    transactions: []
+
+};
+
+
+//=============================
+// LOAD SAVED DATA
+//=============================
+
+if (localStorage.getItem("ssTelecom")) {
+
+    data = JSON.parse(localStorage.getItem("ssTelecom"));
+
+}
+
+
+//=============================
+// SAVE DATA
+//=============================
+
+function saveData() {
+
+    localStorage.setItem(
+
+        "ssTelecom",
+
+        JSON.stringify(data)
+
+    );
+
+}
+
+
+//=============================
+// UPDATE DASHBOARD
+//=============================
+
+function updateDashboard() {
+
+    document.getElementById("easyloadStock").innerHTML =
+        data.easyload;
+
+    document.getElementById("productBuy").innerHTML =
+        data.productBuy;
+
+    document.getElementById("productSale").innerHTML =
+        data.productSale;
+
+    document.getElementById("barbarizeBuy").innerHTML =
+        data.barbarizeBuy;
+
+    document.getElementById("barbarizeSale").innerHTML =
+        data.barbarizeSale;
+
+    document.getElementById("dailyProfit").innerHTML =
+        data.dailyProfit;
+
+    document.getElementById("monthlyProfit").innerHTML =
+        data.monthlyProfit;
+
+    document.getElementById("stockBalance").innerHTML =
+        data.stockBalance;
+
+    document.getElementById("currentAssets").innerHTML =
+        data.currentAssets;
+
+    document.getElementById("totalSales").innerHTML =
+        data.totalSales;
+
+    document.getElementById("profitLoss").innerHTML =
+        data.dailyProfit;
+
+    document.getElementById("cardStock").innerHTML =
+        data.cardBuy - data.cardSale;
+
+}
+
+
+//=============================
+// START
+//=============================
+
+updateDashboard();
+//=====================================================
+// APP.JS (PART-2)
+// SAVE SYSTEM
+//=====================================================
+
+
+//=====================================
+// FLEXI LOAD SAVE
+//=====================================
+
+const saveFlexiBtn = document.getElementById("saveFlexi");
+
+if(saveFlexiBtn){
+
+saveFlexiBtn.addEventListener("click",()=>{
+
+let gp = Number(document.getElementById("gpBalance").value)||0;
+
+let robi = Number(document.getElementById("robiBalance").value)||0;
+
+let bl = Number(document.getElementById("blBalance").value)||0;
+
+let airtel = Number(document.getElementById("airtelBalance").value)||0;
+
+let total = gp+robi+bl+airtel;
+
+data.easyload += total;
+
+data.transactions.push({
+
+type:"Flexi Load",
+
+gp:gp,
+
+robi:robi,
+
+banglalink:bl,
+
+airtel:airtel,
+
+total:total,
+
+date:new Date().toLocaleString()
 
 });
 
+document.getElementById("gpBalance").value="";
+
+document.getElementById("robiBalance").value="";
+
+document.getElementById("blBalance").value="";
+
+document.getElementById("airtelBalance").value="";
+
+saveData();
+
+updateDashboard();
+
+});
+
+}
 
 
-//===============================
+
+//=====================================
 // MOBILE BANKING SAVE
-//===============================
+//=====================================
 
-const saveBanking = document.getElementById("saveBanking");
+const saveBankBtn=document.getElementById("saveBanking");
 
-saveBanking.addEventListener("click",()=>{
+if(saveBankBtn){
 
-    bkashBalance.value="";
-    nagadBalance.value="";
-    rocketBalance.value="";
-    upayBalance.value="";
+saveBankBtn.addEventListener("click",()=>{
 
-    alert("Mobile Banking Saved Successfully");
+let bkash=Number(document.getElementById("bkashBalance").value)||0;
+
+let nagad=Number(document.getElementById("nagadBalance").value)||0;
+
+let rocket=Number(document.getElementById("rocketBalance").value)||0;
+
+let upay=Number(document.getElementById("upayBalance").value)||0;
+
+let total=bkash+nagad+rocket+upay;
+
+data.mobileBanking+=total;
+
+data.transactions.push({
+
+type:"Mobile Banking",
+
+bkash:bkash,
+
+nagad:nagad,
+
+rocket:rocket,
+
+upay:upay,
+
+total:total,
+
+date:new Date().toLocaleString()
 
 });
-//========================================
-// PHASE 3.2
+
+document.getElementById("bkashBalance").value="";
+
+document.getElementById("nagadBalance").value="";
+
+document.getElementById("rocketBalance").value="";
+
+document.getElementById("upayBalance").value="";
+
+saveData();
+
+updateDashboard();
+
+});
+
+}
+//=====================================================
+// APP.JS (PART-3)
 // PRODUCT | CARD | BARBARIZE
-//========================================
+//=====================================================
 
 
-//===============================
+//=====================================
 // PRODUCT SAVE
-//===============================
+//=====================================
 
-const saveProduct = document.getElementById("saveProduct");
+const saveProductBtn=document.getElementById("saveProduct");
 
-if(saveProduct){
+if(saveProductBtn){
 
-saveProduct.addEventListener("click",()=>{
-
-let buy=document.getElementById("productBuyInput").value;
-let sale=document.getElementById("productSaleInput").value;
-
-buy=Number(buy);
-sale=Number(sale);
-
-let profit=sale-buy;
-
-document.getElementById("productProfit").innerHTML=profit;
-
-document.getElementById("productBuyInput").value="";
-document.getElementById("productSaleInput").value="";
-
-alert("Product Saved Successfully");
-
-});
-
-}
-
-
-
-//===============================
-// CARD SAVE
-//===============================
-
-const saveCard=document.getElementById("saveCard");
-
-if(saveCard){
-
-saveCard.addEventListener("click",()=>{
-
-let buy=document.getElementById("cardBuyInput").value;
-let sale=document.getElementById("cardSaleInput").value;
-
-buy=Number(buy);
-sale=Number(sale);
-
-let stock=buy-sale;
-
-document.getElementById("cardCurrentStock").innerHTML=stock;
-
-document.getElementById("cardBuyInput").value="";
-document.getElementById("cardSaleInput").value="";
-
-alert("Card Saved Successfully");
-
-});
-
-}
-
-
-
-//===============================
-// BARBARIZE SAVE
-//===============================
-
-const saveBarbarize=document.getElementById("saveBarbarize");
-
-if(saveBarbarize){
-
-saveBarbarize.addEventListener("click",()=>{
-
-let buy=document.getElementById("barbarizeBuyInput").value;
-let sale=document.getElementById("barbarizeSaleInput").value;
-
-buy=Number(buy);
-sale=Number(sale);
-
-let profit=sale-buy;
-
-document.getElementById("barbarizeProfit").innerHTML=profit;
-
-document.getElementById("barbarizeBuyInput").value="";
-document.getElementById("barbarizeSaleInput").value="";
-
-alert("Barbarize Saved Successfully");
-
-});
-
-}
-//========================================
-// PHASE 3.3
-// DASHBOARD AUTO UPDATE SYSTEM
-//========================================
-
-// Dashboard Total Variable
-
-let easyloadTotal = 0;
-
-let productBuyTotal = 0;
-let productSaleTotal = 0;
-
-let cardStockTotal = 0;
-
-let barbarizeBuyTotal = 0;
-let barbarizeSaleTotal = 0;
-
-
-//========================================
-// FLEXILOAD DASHBOARD
-//========================================
-
-saveFlexi.addEventListener("click",()=>{
-
-let gp=Number(gpBalance.value)||0;
-let robi=Number(robiBalance.value)||0;
-let bl=Number(blBalance.value)||0;
-let airtel=Number(airtelBalance.value)||0;
-
-easyloadTotal=gp+robi+bl+airtel;
-
-document.getElementById("easyloadStock").innerHTML=easyloadTotal;
-
-});
-
-
-//========================================
-// PRODUCT DASHBOARD
-//========================================
-
-if(saveProduct){
-
-saveProduct.addEventListener("click",()=>{
+saveProductBtn.addEventListener("click",()=>{
 
 let buy=Number(document.getElementById("productBuyInput").value)||0;
 
 let sale=Number(document.getElementById("productSaleInput").value)||0;
 
-productBuyTotal+=buy;
-productSaleTotal+=sale;
+let profit=sale-buy;
 
-document.getElementById("productBuy").innerHTML=productBuyTotal;
+// Dashboard Total
 
-document.getElementById("productSale").innerHTML=productSaleTotal;
+data.productBuy+=buy;
+
+data.productSale+=sale;
+
+data.dailyProfit+=profit;
+
+data.monthlyProfit+=profit;
+
+data.totalSales+=sale;
+
+// Transaction
+
+data.transactions.push({
+
+type:"Product",
+
+buy:buy,
+
+sale:sale,
+
+profit:profit,
+
+date:new Date().toLocaleString()
+
+});
+
+// Clear
+
+document.getElementById("productBuyInput").value="";
+
+document.getElementById("productSaleInput").value="";
+
+document.getElementById("productProfit").innerHTML="0";
+
+saveData();
+
+updateDashboard();
 
 });
 
 }
 
 
-//========================================
-// CARD DASHBOARD
-//========================================
 
-if(saveCard){
+//=====================================
+// CARD SAVE
+//=====================================
 
-saveCard.addEventListener("click",()=>{
+const saveCardBtn=document.getElementById("saveCard");
 
-let buy=Number(cardBuyInput.value)||0;
+if(saveCardBtn){
 
-let sale=Number(cardSaleInput.value)||0;
+saveCardBtn.addEventListener("click",()=>{
 
-cardStockTotal+=(buy-sale);
+let buy=Number(document.getElementById("cardBuyInput").value)||0;
 
-document.getElementById("cardStock").innerHTML=cardStockTotal;
+let sale=Number(document.getElementById("cardSaleInput").value)||0;
+
+// Total
+
+data.cardBuy+=buy;
+
+data.cardSale+=sale;
+
+// Transaction
+
+data.transactions.push({
+
+type:"Card",
+
+buy:buy,
+
+sale:sale,
+
+stock:data.cardBuy-data.cardSale,
+
+date:new Date().toLocaleString()
+
+});
+
+// Clear
+
+document.getElementById("cardBuyInput").value="";
+
+document.getElementById("cardSaleInput").value="";
+
+document.getElementById("cardCurrentStock").innerHTML="0";
+
+saveData();
+
+updateDashboard();
 
 });
 
 }
 
 
-//========================================
-// BARBARIZE DASHBOARD
-//========================================
 
-if(saveBarbarize){
+//=====================================
+// BARBARIZE SAVE
+//=====================================
 
-saveBarbarize.addEventListener("click",()=>{
+const saveBarBtn=document.getElementById("saveBarbarize");
 
-let buy=Number(barbarizeBuyInput.value)||0;
+if(saveBarBtn){
 
-let sale=Number(barbarizeSaleInput.value)||0;
+saveBarBtn.addEventListener("click",()=>{
 
-barbarizeBuyTotal+=buy;
-barbarizeSaleTotal+=sale;
+let buy=Number(document.getElementById("barbarizeBuyInput").value)||0;
 
-document.getElementById("barbarizeBuy").innerHTML=barbarizeBuyTotal;
+let sale=Number(document.getElementById("barbarizeSaleInput").value)||0;
 
-document.getElementById("barbarizeSale").innerHTML=barbarizeSaleTotal;
+let profit=sale-buy;
+
+// Total
+
+data.barbarizeBuy+=buy;
+
+data.barbarizeSale+=sale;
+
+data.dailyProfit+=profit;
+
+data.monthlyProfit+=profit;
+
+data.totalSales+=sale;
+
+// Transaction
+
+data.transactions.push({
+
+type:"Barbarize",
+
+buy:buy,
+
+sale:sale,
+
+profit:profit,
+
+date:new Date().toLocaleString()
+
+});
+
+// Clear
+
+document.getElementById("barbarizeBuyInput").value="";
+
+document.getElementById("barbarizeSaleInput").value="";
+
+document.getElementById("barbarizeProfit").innerHTML="0";
+
+saveData();
+
+updateDashboard();
 
 });
 
 }
-//========================================
-// PHASE 3.4
-// PROFIT / LOSS SYSTEM
-//========================================
-
-// Opening Amount
-let openingAmount = Number(document.getElementById("openingAmount").value) || 30000;
 
 
-// হিসাব আপডেট করার Function
 
-function updateSystemDashboard(){
+//=====================================
+// SYSTEM CALCULATION
+//=====================================
 
-    // Dashboard Value
+function calculateSystem(){
 
-    let easyload = easyloadTotal;
+data.currentAssets=
 
-    let productSale = productSaleTotal;
+data.easyload+
 
-    let productBuy = productBuyTotal;
+data.mobileBanking+
 
-    let cardStock = cardStockTotal;
+(data.cardBuy-data.cardSale)+
 
-    let barbarizeSale = barbarizeSaleTotal;
+data.productSale+
 
-    let barbarizeBuy = barbarizeBuyTotal;
-
-
-    // Total Sales
-
-    let totalSales =
-        productSale +
-        barbarizeSale;
+data.barbarizeSale;
 
 
-    // Current Assets
+data.stockBalance=
 
-    let currentAssets =
-        easyload +
-        cardStock +
-        totalSales;
+data.openingAmount-data.currentAssets;
 
+updateDashboard();
 
-    // Profit
-
-    let totalProfit =
-        (productSale-productBuy)
-        +
-        (barbarizeSale-barbarizeBuy);
-
-
-    // Stock Balance
-
-    let stockBalance =
-        openingAmount-currentAssets;
-
-
-    // Dashboard Update
-
-    document.getElementById("stockBalance").innerHTML=stockBalance;
-
-    document.getElementById("totalSales").innerHTML=totalSales;
-
-    document.getElementById("dailyProfit").innerHTML=totalProfit;
-
-    document.getElementById("monthlyProfit").innerHTML=totalProfit;
-
-    document.getElementById("currentAssets").innerHTML=currentAssets;
-
-    document.getElementById("profitLoss").innerHTML=totalProfit;
-
-    document.getElementById("currentAssetValue").innerHTML=currentAssets;
-
-    document.getElementById("profitLossValue").innerHTML=totalProfit;
+saveData();
 
 }
 
 
 
-//========================================
+//=====================================
 // AUTO UPDATE
-//========================================
+//=====================================
 
-saveFlexi.addEventListener("click",updateSystemDashboard);
+setInterval(calculateSystem,500);
+//============================================
+// APP.JS PART-4
+// TRANSACTION | BACKUP | RESET
+//============================================
 
-if(saveProduct)
-saveProduct.addEventListener("click",updateSystemDashboard);
 
-if(saveCard)
-saveCard.addEventListener("click",updateSystemDashboard);
+//=============================
+// TRANSACTION BUTTON
+//=============================
 
-if(saveBarbarize)
-saveBarbarize.addEventListener("click",updateSystemDashboard);
+const transactionBtn=document.getElementById("transactionBtn");
+
+if(transactionBtn){
+
+transactionBtn.addEventListener("click",()=>{
+
+let history="";
+
+data.transactions.forEach((item,index)=>{
+
+history+=
+(index+1)+". "
++item.type+
+"\nDate : "+item.date+
+"\n"+JSON.stringify(item)+
+"\n\n";
+
+});
+
+if(history===""){
+
+history="No Transaction Found";
+
+}
+
+alert(history);
+
+});
+
+}
+
+
+
+//=============================
+// BACKUP BUTTON
+//=============================
+
+const backupBtn=document.getElementById("backupBtn");
+
+if(backupBtn){
+
+backupBtn.addEventListener("click",()=>{
+
+const backup=JSON.stringify(data,null,2);
+
+const blob=new Blob([backup],{
+
+type:"application/json"
+
+});
+
+const link=document.createElement("a");
+
+link.href=URL.createObjectURL(blob);
+
+link.download="SS_TELECOM_BACKUP.json";
+
+link.click();
+
+});
+
+}
+
+
+
+//=============================
+// RESET FUNCTION
+//=============================
+
+function resetSystem(){
+
+data={
+
+easyload:0,
+
+mobileBanking:0,
+
+productBuy:0,
+
+productSale:0,
+
+cardBuy:0,
+
+cardSale:0,
+
+barbarizeBuy:0,
+
+barbarizeSale:0,
+
+dailyProfit:0,
+
+monthlyProfit:0,
+
+totalSales:0,
+
+stockBalance:0,
+
+currentAssets:0,
+
+openingAmount:30000,
+
+transactions:[]
+
+};
+
+saveData();
+
+updateDashboard();
+
+}
+
+
+
+//=============================
+// OPENING AMOUNT
+//=============================
+
+const opening=document.getElementById("openingAmount");
+
+if(opening){
+
+opening.addEventListener("change",()=>{
+
+data.openingAmount=
+
+Number(opening.value)||30000;
+
+calculateSystem();
+
+saveData();
+
+});
+
+}
+
+
+
+//=============================
+// LOAD OPENING AMOUNT
+//=============================
+
+if(opening){
+
+opening.value=data.openingAmount;
+
+}
+
+
+
+//=============================
+// SOFTWARE START
+//=============================
+
+calculateSystem();
+
+updateDashboard();
+
+console.log("SS TELECOM READY");
