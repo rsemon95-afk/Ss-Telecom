@@ -1,217 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>SS Telecom Management System</title>
 
 <link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
+
 
 <div class="container">
 
-    <!-- Header -->
-    <div class="header">
-        <h1>SS Telecom Management System</h1>
-        <p>Daily Business হিসাব</p>
-    </div>
 
 
-    <!-- Top Summary Row -->
-    <div class="excel-row">
+<!-- HEADER -->
 
-        <div class="box">
-            <h3>Total Stock</h3>
-            <div class="value">৳ 0</div>
-        </div>
+<div class="header">
 
+<h1>SS Telecom Management System</h1>
 
-        <div class="box">
-            <h3>Today's Sale</h3>
-            <div class="value">৳ 0</div>
-        </div>
-
-
-        <div class="box">
-            <h3>Today's Profit</h3>
-            <div class="value">৳ 0</div>
-        </div>
-
-
-        <div class="box">
-            <h3>Cash Balance</h3>
-            <div class="value">৳ 0</div>
-        </div>
-
-    </div>
-
-
-
-    <!-- Main Accounting Area -->
-
-    <div class="section-title">
-        Daily Transaction
-    </div>
-
-
-    <div class="excel-table">
-
-
-        <div class="table-box">
-
-            <h2>Flexiload</h2>
-
-            <label>GP</label>
-            <input type="number" placeholder="Amount">
-
-            <label>Robi</label>
-            <input type="number" placeholder="Amount">
-
-
-            <label>Banglalink</label>
-            <input type="number" placeholder="Amount">
-
-
-            <label>Airtel</label>
-            <input type="number" placeholder="Amount">
-
-
-            <button id="saveEasyload">
-                Save Flexiload
-            </button>
-
-        </div>
-
-
-
-
-        <div class="table-box">
-
-            <h2>Mobile Banking</h2>
-
-
-            <label>bKash</label>
-            <input type="number" placeholder="Amount">
-
-
-            <label>Nagad</label>
-            <input type="number" placeholder="Amount">
-
-
-            <label>Rocket</label>
-            <input type="number" placeholder="Amount">
-
-
-            <label>Upay</label>
-            <input type="number" placeholder="Amount">
-
-
-            <button id="saveBanking">
-                Save Banking
-            </button>
-
-
-        </div>
-
-
-
-    </div>
-
-
+<p>Daily Business Accounting Dashboard</p>
 
 </div>
 
 
-<script src="app.js"></script>
 
-</body>
-</html>
-<!-- Part 2 : Product & Stock Section -->
+
+
+<!-- DASHBOARD -->
 
 
 <div class="section-title">
-    Product Management
-</div>
-
-
-<div class="excel-table">
-
-
-    <!-- Product Sale -->
-
-    <div class="table-box">
-
-        <h2>Product Sale</h2>
-
-
-        <label>Product Name</label>
-        <input type="text" placeholder="Product Name">
-
-
-        <label>Quantity</label>
-        <input type="number" placeholder="Qty">
-
-
-        <label>Sale Amount</label>
-        <input type="number" placeholder="Amount">
-
-
-        <label>Profit</label>
-        <input type="number" placeholder="Profit">
-
-
-        <button>
-            Save Sale
-        </button>
-
-
-    </div>
-
-
-
-    <!-- Product Buy -->
-
-
-    <div class="table-box">
-
-        <h2>Product Buy</h2>
-
-
-        <label>Product Name</label>
-        <input type="text" placeholder="Product Name">
-
-
-        <label>Quantity</label>
-        <input type="number" placeholder="Qty">
-
-
-        <label>Buy Amount</label>
-        <input type="number" placeholder="Amount">
-
-
-        <label>Supplier</label>
-        <input type="text" placeholder="Supplier">
-
-
-        <button>
-            Save Buy
-        </button>
-
-
-    </div>
-
-
-</div>
-
-
-
-
-<!-- Stock Summary -->
-
-
-<div class="section-title">
-    Stock & Assets
+Dashboard Summary
 </div>
 
 
@@ -219,39 +47,54 @@
 <div class="excel-row">
 
 
-    <div class="box">
-        <h3>Card Stock</h3>
-        <div class="value">
-            0 Pcs
-        </div>
-    </div>
+<div class="box">
+
+<h3>Total Stock</h3>
+
+<div class="value">
+৳ 0
+</div>
+
+</div>
 
 
 
-    <div class="box">
-        <h3>SIM Stock</h3>
-        <div class="value">
-            0 Pcs
-        </div>
-    </div>
+<div class="box">
+
+<h3>Today's Sale</h3>
+
+<div class="value">
+৳ 0
+</div>
+
+</div>
 
 
 
-    <div class="box">
-        <h3>Mobile Accessories</h3>
-        <div class="value">
-            ৳ 0
-        </div>
-    </div>
+
+<div class="box">
+
+<h3>Today's Profit</h3>
+
+<div class="value profit">
+৳ 0
+</div>
+
+</div>
 
 
 
-    <div class="box">
-        <h3>Current Assets</h3>
-        <div class="value">
-            ৳ 0
-        </div>
-    </div>
+
+<div class="box">
+
+<h3>Cash Balance</h3>
+
+<div class="value">
+৳ 0
+</div>
+
+</div>
+
 
 
 </div>
@@ -259,81 +102,392 @@
 
 
 
-<!-- Profit Loss -->
+
+
+
+<!-- TRANSACTION -->
 
 
 <div class="section-title">
-    Profit / Loss Report
+Daily Transaction
 </div>
+
 
 
 
 <div class="excel-table">
 
 
-    <div class="table-box">
-
-        <h2>Today's Report</h2>
-
-
-        <label>Total Income</label>
-        <input type="number" value="0">
-
-
-        <label>Total Expense</label>
-        <input type="number" value="0">
-
-
-        <label>Net Profit</label>
-        <input type="number" value="0">
-
-
-    </div>
 
 
 
-    <div class="table-box">
+<!-- FLEXILOAD -->
 
-        <h2>Cash Summary</h2>
-
-
-        <label>Cash In</label>
-        <input type="number" value="0">
+<div class="table-box">
 
 
-        <label>Cash Out</label>
-        <input type="number" value="0">
+<h2>Flexiload</h2>
 
 
-        <label>Balance</label>
-        <input type="number" value="0">
+<label>GP</label>
+<input type="number" placeholder="Amount">
 
 
-    </div>
+<label>Robi</label>
+<input type="number" placeholder="Amount">
+
+
+<label>Banglalink</label>
+<input type="number" placeholder="Amount">
+
+
+<label>Airtel</label>
+<input type="number" placeholder="Amount">
+
+
+
+<button id="saveEasyload">
+Save Flexiload
+</button>
+
 
 
 </div>
-<!-- Part 3 : History & Report Section -->
+
+
+
+
+
+
+<!-- MOBILE BANKING -->
+
+
+<div class="table-box">
+
+
+<h2>Mobile Banking</h2>
+
+
+<label>bKash</label>
+<input type="number" placeholder="Amount">
+
+
+
+<label>Nagad</label>
+<input type="number" placeholder="Amount">
+
+
+
+<label>Rocket</label>
+<input type="number" placeholder="Amount">
+
+
+
+<label>Upay</label>
+<input type="number" placeholder="Amount">
+
+
+
+<button id="saveBanking">
+Save Banking
+</button>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- PRODUCT -->
 
 
 <div class="section-title">
-    Daily Transaction History
+Product Management
 </div>
+
+
+
+
+<div class="excel-table">
+
+
+
+<div class="table-box">
+
+
+<h2>Product Sale</h2>
+
+
+<label>Product Name</label>
+
+<input type="text">
+
+
+
+<label>Quantity</label>
+
+<input type="number">
+
+
+
+<label>Sale Amount</label>
+
+<input type="number">
+
+
+
+<label>Profit</label>
+
+<input type="number">
+
+
+
+<button>
+Save Sale
+</button>
+
+
+</div>
+
+
+
+
+
+
+<div class="table-box">
+
+
+<h2>Product Buy</h2>
+
+
+<label>Product Name</label>
+
+<input type="text">
+
+
+
+<label>Quantity</label>
+
+<input type="number">
+
+
+
+<label>Buy Amount</label>
+
+<input type="number">
+
+
+
+<label>Supplier</label>
+
+<input type="text">
+
+
+
+<button>
+Save Buy
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- STOCK -->
+
+
+<div class="section-title">
+Stock & Assets
+</div>
+
+
+
+<div class="excel-row">
+
+
+
+<div class="box">
+
+<h3>Card Stock</h3>
+
+<div class="value">
+0 PCS
+</div>
+
+</div>
+
+
+
+
+<div class="box">
+
+<h3>SIM Stock</h3>
+
+<div class="value">
+0 PCS
+</div>
+
+</div>
+
+
+
+
+
+<div class="box">
+
+<h3>Accessories</h3>
+
+<div class="value">
+৳0
+</div>
+
+</div>
+
+
+
+
+
+<div class="box">
+
+<h3>Current Assets</h3>
+
+<div class="value">
+৳0
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- PROFIT LOSS -->
+
+
+<div class="section-title">
+Profit / Loss Report
+</div>
+
+
+
+
+<div class="excel-table">
+
+
+
+<div class="table-box">
+
+
+<h2>Daily Report</h2>
+
+
+<label>Total Income</label>
+
+<input type="number" value="0">
+
+
+<label>Total Expense</label>
+
+<input type="number" value="0">
+
+
+<label>Net Profit</label>
+
+<input type="number" value="0">
+
+
+</div>
+
+
+
+
+
+<div class="table-box">
+
+
+<h2>Cash Summary</h2>
+
+
+<label>Cash In</label>
+
+<input type="number" value="0">
+
+
+
+<label>Cash Out</label>
+
+<input type="number" value="0">
+
+
+
+<label>Balance</label>
+
+<input type="number" value="0">
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- SEARCH -->
+
+
+<div class="section-title">
+Transaction History
+</div>
+
 
 
 
 <div class="search-area">
 
-    <input type="date" id="searchDate">
 
-    <button id="searchBtn">
-        Search
-    </button>
+<input type="date" id="searchDate">
 
 
-    <button id="printBtn">
-        Print Report
-    </button>
+<button id="searchBtn">
+Search
+</button>
+
+
+<button id="printBtn">
+Print
+</button>
+
 
 </div>
 
@@ -341,7 +495,10 @@
 
 
 
-<!-- Excel Style Table -->
+
+
+
+<!-- TABLE -->
 
 
 <div class="history-table">
@@ -355,12 +512,19 @@
 <tr>
 
 <th>Date</th>
+
 <th>Type</th>
+
 <th>Description</th>
+
 <th>Amount</th>
+
 <th>Profit</th>
+
 <th>Loss</th>
+
 <th>Balance</th>
+
 
 </tr>
 
@@ -374,12 +538,19 @@
 <tr>
 
 <td>-</td>
+
 <td>-</td>
+
 <td>No Data</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td>0</td>
+
 
 </tr>
 
@@ -399,11 +570,12 @@
 
 
 
-<!-- Bottom Dashboard -->
+
+<!-- FINAL SUMMARY -->
 
 
 <div class="section-title">
-    Final Summary
+Final Summary
 </div>
 
 
@@ -418,7 +590,7 @@
 <h3>Total Sale</h3>
 
 <div class="value">
-৳ 0
+৳0
 </div>
 
 </div>
@@ -431,7 +603,7 @@
 <h3>Total Buy</h3>
 
 <div class="value">
-৳ 0
+৳0
 </div>
 
 </div>
@@ -444,12 +616,11 @@
 
 <h3>Total Profit</h3>
 
-<div class="value">
-৳ 0
+<div class="value profit">
+৳0
 </div>
 
 </div>
-
 
 
 
@@ -458,31 +629,38 @@
 
 <h3>Total Loss</h3>
 
-<div class="value">
-৳ 0
+<div class="value loss">
+৳0
 </div>
 
 </div>
 
 
 
+
 </div>
 
 
 
 
 
-
-
-<!-- Footer -->
 
 
 <div class="footer">
 
-
-<p>
 SS Telecom © 2026 | Business Management System
-</p>
+
+</div>
+
 
 
 </div>
+
+
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>
