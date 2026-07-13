@@ -1,67 +1,34 @@
-/* =====================================
-   SS Telecom Management System
-   CSS Part 1
-===================================== */
-
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
-}
-
+/* =================================
+ SS Telecom Premium Excel Layout
+ CSS Layout Fix Part 1
+================================= */
 
 
 body{
-
-    background:#e9ecef;
-    padding:20px;
-
+    background:#f5f6fa;
+    font-family:"Segoe UI",Arial,sans-serif;
 }
-
-
 
 
 .container{
-
-    width:100%;
-    max-width:1400px;
+    width:98%;
     margin:auto;
-
 }
-
 
 
 
 /* Header */
 
 .header{
-
+    height:80px;
     background:white;
-    border:2px solid #333;
-    padding:15px;
-    text-align:center;
-    margin-bottom:15px;
-
+    border:1px solid #222;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    margin-bottom:10px;
 }
-
-
-.header h1{
-
-    font-size:28px;
-    color:#222;
-
-}
-
-
-.header p{
-
-    margin-top:5px;
-    color:#555;
-
-}
-
 
 
 
@@ -69,20 +36,22 @@ body{
 
 /* Section Title */
 
-
 .section-title{
+
+    height:40px;
+    display:flex;
+    align-items:center;
+    padding-left:15px;
 
     background:#1f4e78;
     color:white;
+
     font-size:18px;
     font-weight:bold;
 
-    padding:10px;
+    border:1px solid #222;
 
-    border:2px solid #333;
-
-    margin-top:15px;
-    margin-bottom:10px;
+    margin-top:10px;
 
 }
 
@@ -90,7 +59,7 @@ body{
 
 
 
-/* Excel Row */
+/* Top Dashboard Row */
 
 
 .excel-row{
@@ -100,9 +69,9 @@ body{
     grid-template-columns:
     repeat(4,1fr);
 
-    gap:10px;
+    gap:8px;
 
-    margin-bottom:15px;
+    width:100%;
 
 }
 
@@ -110,22 +79,18 @@ body{
 
 
 
-/* Dashboard Box */
-
-
 .box{
 
 
+    height:110px;
+
     background:white;
 
-    border:2px solid #333;
+    border:1px solid #333;
 
-    min-height:100px;
+    display:flex;
 
-    text-align:center;
-
-    padding:15px;
-
+    flex-direction:column;
 
 }
 
@@ -135,28 +100,42 @@ body{
 
 .box h3{
 
-    background:#d9eaf7;
+
+    height:35px;
+
+    margin:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#dbe5f1;
 
     border-bottom:1px solid #333;
 
-    padding:8px;
-
-    font-size:16px;
+    font-size:15px;
 
 
 }
+
 
 
 
 .value{
 
-    margin-top:15px;
+    flex:1;
 
-    font-size:22px;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:24px;
 
     font-weight:bold;
-
-    color:#008000;
 
 }
 
@@ -165,27 +144,26 @@ body{
 
 
 
-/* Two Column Area */
+/* Two Column Section */
 
 
 .excel-table{
 
+
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:
 
-    gap:15px;
+    1fr 1fr;
 
-    margin-bottom:15px;
+
+    gap:8px;
+
 
 }
 
 
 
-
-
-
-/* Input Box Section */
 
 
 .table-box{
@@ -193,9 +171,9 @@ body{
 
     background:white;
 
-    border:2px solid #333;
+    border:1px solid #333;
 
-    padding:15px;
+    padding:10px;
 
 
 }
@@ -207,92 +185,120 @@ body{
 .table-box h2{
 
 
-    text-align:center;
+    height:35px;
 
-    background:#f2f2f2;
+    margin:-10px -10px 10px -10px;
 
-    border:1px solid #555;
 
-    padding:8px;
+    display:flex;
 
-    margin-bottom:15px;
+    align-items:center;
 
-    font-size:18px;
+    justify-content:center;
+
+
+    background:#dbe5f1;
+
+    border-bottom:1px solid #333;
+
+
+    font-size:16px;
 
 
 }
+/* =================================
+ SS Telecom Premium Excel Layout
+ CSS Premium Part 2
+================================= */
 
 
+
+/* Input Design */
 
 
 .table-box label{
 
     display:block;
 
-    font-weight:bold;
+    font-size:14px;
+
+    font-weight:600;
 
     margin-top:8px;
 
-}
+    color:#333;
 
+}
 
 
 
 .table-box input{
 
-
     width:100%;
 
-    padding:8px;
+    height:34px;
 
-    border:1px solid #555;
+    border:1px solid #777;
 
-    margin-top:4px;
+    padding:6px 10px;
 
-    font-size:15px;
+    font-size:14px;
 
+    background:#fff;
 
 }
-/* =====================================
-   SS Telecom Management System
-   CSS Part 2
-===================================== */
 
 
 
-/* Buttons */
+.table-box input:focus{
+
+    border:2px solid #1f4e78;
+
+    outline:none;
+
+}
 
 
-.table-box button,
-button{
 
+
+
+
+/* Button Premium Style */
+
+
+.table-box button{
+
+
+    height:38px;
 
     width:100%;
 
-    padding:10px;
+    margin-top:12px;
 
-    margin-top:15px;
+
+    border:none;
 
     background:#1f4e78;
 
     color:white;
 
-    border:none;
 
-    border-radius:3px;
-
-    font-size:16px;
+    font-size:15px;
 
     font-weight:bold;
 
+
     cursor:pointer;
+
+    border-radius:2px;
 
 
 }
 
 
 
-button:hover{
+
+.table-box button:hover{
 
 
     background:#163a5a;
@@ -305,24 +311,138 @@ button:hover{
 
 
 
+/* Different Save Colors */
+
+
+#saveEasyload{
+
+    background:#008000;
+
+}
+
+
+#saveBanking{
+
+    background:#7b1fa2;
+
+}
+
+
+
+
+
+
+/* Product / Report Box Alignment */
+
+
+.table-box{
+
+    min-height:300px;
+
+}
+
+
+
+
+
+/* Dashboard Value Style */
+
+
+.value{
+
+
+    color:#222;
+
+
+}
+
+
+
+
+
+.box:nth-child(1) .value{
+
+    color:#1565c0;
+
+}
+
+
+
+.box:nth-child(2) .value{
+
+    color:#008000;
+
+}
+
+
+
+.box:nth-child(3) .value{
+
+    color:#2e7d32;
+
+}
+
+
+
+.box:nth-child(4) .value{
+
+    color:#ef6c00;
+
+}
+
+
+
+
+
+
+
+
+/* Excel Border Effect */
+
+
+.box,
+.table-box,
+.history-table{
+
+
+    border-collapse:collapse;
+
+}
+
+
+
+
+.box:hover,
+.table-box:hover{
+
+
+    box-shadow:
+    0 0 8px rgba(0,0,0,0.15);
+
+
+}
+
+
+
+
+
+
+
 /* Search Area */
 
 
 .search-area{
 
 
-    background:white;
-
-    border:2px solid #333;
-
-    padding:15px;
-
     display:flex;
 
-    gap:10px;
+    gap:8px;
 
-    margin-bottom:15px;
+    background:white;
 
+    padding:10px;
+
+    border:1px solid #333;
 
 }
 
@@ -331,11 +451,11 @@ button:hover{
 .search-area input{
 
 
-    padding:10px;
+    height:35px;
 
-    border:1px solid #555;
+    border:1px solid #777;
 
-    font-size:15px;
+    padding:5px;
 
     flex:1;
 
@@ -347,9 +467,17 @@ button:hover{
 .search-area button{
 
 
-    width:150px;
+    width:120px;
 
-    margin:0;
+    height:35px;
+
+    background:#1f4e78;
+
+    color:white;
+
+    border:none;
+
+    font-weight:bold;
 
 
 }
@@ -359,34 +487,85 @@ button:hover{
 
 
 
+/* Summary Box Equal Size */
 
-/* History Table */
+
+.excel-row .box{
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+/* Mobile Adjust */
+
+
+@media(max-width:768px){
+
+
+    .excel-row{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+
+    .excel-table{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}
+
+
+@media(max-width:480px){
+
+
+    .excel-row{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}
+/* =================================
+ SS Telecom Premium Excel Layout
+ CSS Premium Part 3
+================================= */
+
+
+
+/* History Table Premium */
 
 
 .history-table{
 
+    width:100%;
 
     background:white;
 
-    border:2px solid #333;
+    border:1px solid #333;
 
-    overflow-x:auto;
-
-    margin-bottom:15px;
-
+    overflow:auto;
 
 }
-
 
 
 
 .history-table table{
 
-
     width:100%;
 
     border-collapse:collapse;
-
 
 }
 
@@ -395,40 +574,52 @@ button:hover{
 .history-table th{
 
 
+    height:38px;
+
     background:#1f4e78;
 
     color:white;
 
-    padding:10px;
-
     border:1px solid #333;
+
+    font-size:14px;
 
     text-align:center;
 
 
 }
+
 
 
 
 .history-table td{
 
 
-    padding:8px;
+    height:35px;
 
-    border:1px solid #555;
+    border:1px solid #999;
 
     text-align:center;
 
+    font-size:14px;
+
 
 }
+
 
 
 
 .history-table tr:nth-child(even){
 
+    background:#f8f8f8;
 
-    background:#f2f2f2;
+}
 
+
+
+.history-table tr:hover{
+
+    background:#eaf2f8;
 
 }
 
@@ -438,302 +629,25 @@ button:hover{
 
 
 
-
-/* Final Summary Box */
-
-
-.excel-row .box:nth-child(3) .value{
-
-
-    color:green;
-
-
-}
-
-
-
-.excel-row .box:nth-child(4) .value{
-
-
-    color:red;
-
-
-}
-
-
-
-
-
-
-
-/* Footer */
-
-
-.footer{
-
-
-    margin-top:20px;
-
-    background:white;
-
-    border:2px solid #333;
-
-    text-align:center;
-
-    padding:12px;
-
-    font-weight:bold;
-
-
-}
-
-
-
-
-
-
-
-
-/* Product Section */
-
-
-.table-box input:focus{
-
-
-    outline:none;
-
-    border:2px solid #1f4e78;
-
-
-}
-
-
-
-
-
-
-
-/* Mobile Responsive */
-
-
-@media(max-width:900px){
-
-
-
-    .excel-row{
-
-
-        grid-template-columns:
-        repeat(2,1fr);
-
-
-    }
-
-
-
-    .excel-table{
-
-
-        grid-template-columns:1fr;
-
-
-    }
-
-
-}
-
-
-
-
-
-@media(max-width:600px){
-
-
-
-    body{
-
-        padding:10px;
-
-    }
-
-
-
-
-    .excel-row{
-
-
-        grid-template-columns:1fr;
-
-
-    }
-
-
-
-    .header h1{
-
-
-        font-size:22px;
-
-
-    }
-
-
-
-
-    .search-area{
-
-
-        flex-direction:column;
-
-
-    }
-
-
-
-
-    .search-area button{
-
-
-        width:100%;
-
-
-    }
-
-
-
-}
-/* =====================================
-   SS Telecom Management System
-   CSS Part 3
-===================================== */
-
-
-/* Excel Cell Style */
-
-
-.box,
-.table-box,
-.history-table,
-.search-area{
-
-
-    box-shadow:0 2px 5px rgba(0,0,0,0.15);
-
-
-}
-
-
-
-
-
-/* Dashboard Hover */
-
-
-.box{
-
-
-    transition:0.3s;
-
-
-}
-
-
-
-.box:hover{
-
-
-    transform:translateY(-3px);
-
-
-}
-
-
-
-
-
-
-
-/* Title Color Variation */
-
-
-.table-box h2{
-
-
-    color:#1f4e78;
-
-}
-
-
-
-
-
-
-
-/* Profit Color */
+/* Profit Loss Color */
 
 
 .profit{
 
-
-    color:green !important;
+    color:#008000;
 
     font-weight:bold;
 
-
 }
 
-
-
-
-
-/* Loss Color */
 
 
 .loss{
 
-
-    color:red !important;
-
-    font-weight:bold;
-
-
-}
-
-
-
-
-
-/* Warning Stock */
-
-
-.warning{
-
-
-    background:#fff3cd;
-
-    color:#856404;
+    color:#d00000;
 
     font-weight:bold;
 
-
-}
-
-
-
-
-
-/* Empty Data */
-
-
-.empty-data{
-
-
-    text-align:center;
-
-    padding:20px;
-
-    color:#777;
-
 }
 
 
@@ -742,163 +656,33 @@ button:hover{
 
 
 
-/* Excel Like Input */
+/* Final Summary Section */
 
 
-input{
+.excel-row:last-of-type .box{
 
 
-    background:white;
-
-}
-
-
-
-input[type="number"]{
-
-
-    text-align:right;
+    height:120px;
 
 
 }
 
 
 
+.excel-row:last-of-type .box h3{
 
 
-
-
-/* Save Button Different Color */
-
-
-#saveEasyload{
-
-
-    background:#008000;
+    background:#e2f0d9;
 
 
 }
 
 
 
-#saveBanking{
+.excel-row:last-of-type .value{
 
 
-    background:#800080;
-
-
-}
-
-
-
-#saveEasyload:hover{
-
-
-    background:#006400;
-
-
-}
-
-
-
-#saveBanking:hover{
-
-
-    background:#5a005a;
-
-
-}
-
-
-
-
-
-
-
-/* Table Header Fix */
-
-
-.history-table th{
-
-
-    position:sticky;
-
-    top:0;
-
-    z-index:2;
-
-
-}
-
-
-
-
-
-
-
-/* Mobile Table */
-
-
-@media(max-width:600px){
-
-
-.history-table table{
-
-
-    min-width:800px;
-
-
-}
-
-
-}
-
-
-
-
-
-
-
-/* Scroll Bar */
-
-
-::-webkit-scrollbar{
-
-
-    height:8px;
-
-    width:8px;
-
-
-}
-
-
-
-::-webkit-scrollbar-thumb{
-
-
-    background:#1f4e78;
-
-    border-radius:10px;
-
-
-}
-
-
-
-
-
-
-
-/* Professional Dashboard Background */
-
-
-.header,
-.section-title{
-
-
-    letter-spacing:.5px;
-
+    font-size:26px;
 
 }
 
@@ -915,6 +699,26 @@ input[type="number"]{
 
     font-weight:bold;
 
+}
+
+
+
+
+
+
+/* Premium Card Shadow */
+
+
+.header,
+.box,
+.table-box,
+.history-table,
+.search-area{
+
+
+    box-shadow:
+    0 1px 4px rgba(0,0,0,0.18);
+
 
 }
 
@@ -922,39 +726,146 @@ input[type="number"]{
 
 
 
-/* Print Style */
 
 
-@media print{
+/* Remove Extra Space */
 
 
-    button,
-    .search-area{
+.section-title + .excel-row{
 
 
-        display:none;
+    margin-top:0;
+
+}
 
 
-    }
 
 
-    body{
+.excel-row,
+.excel-table{
 
 
-        background:white;
+    margin-bottom:8px;
+
+}
 
 
-    }
 
 
-    .box,
-    .table-box{
 
 
-        box-shadow:none;
+/* Excel Cell Number Alignment */
 
 
-    }
+input[type="number"]{
+
+
+    text-align:right;
+
+}
+
+
+
+
+
+/* Button Finishing */
+
+
+button{
+
+
+    transition:0.2s;
+
+
+}
+
+
+
+button:active{
+
+
+    transform:scale(0.98);
+
+
+}
+
+
+
+
+
+
+
+/* Desktop Perfect Width */
+
+
+@media(min-width:1200px){
+
+
+.container{
+
+    width:95%;
+
+}
+
+
+}
+
+
+
+
+
+
+/* Tablet */
+
+
+@media(max-width:900px){
+
+
+.table-box{
+
+
+    min-height:auto;
+
+
+}
+
+
+
+}
+
+
+
+
+
+/* Mobile Final */
+
+
+@media(max-width:600px){
+
+
+
+.header h1{
+
+    font-size:20px;
+
+}
+
+
+
+.section-title{
+
+    font-size:16px;
+
+}
+
+
+
+.history-table table{
+
+    min-width:800px;
+
+}
+
 
 
 }
