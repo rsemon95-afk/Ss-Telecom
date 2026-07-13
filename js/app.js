@@ -514,13 +514,142 @@ if(history===""){
 history="No Transaction Found";
 
 }
+//============================================
+// SHOW ALL TRANSACTIONS
+//============================================
 
-alert(history);
+
+function loadTransactionTable(){
+
+
+let tbody=document.getElementById("transactionBody");
+
+
+if(!tbody){
+return;
+}
+
+
+tbody.innerHTML="";
+
+
+data.transactions.forEach((item,index)=>{
+
+
+let row=tbody.insertRow();
+
+
+
+row.insertCell(0).innerHTML=index+1;
+
+
+row.insertCell(1).innerHTML=item.date;
+
+
+row.insertCell(2).innerHTML=item.type;
+
+
+
+row.insertCell(3).innerHTML=item.buy || item.total || 0;
+
+
+row.insertCell(4).innerHTML=item.sale || 0;
+
+
+row.insertCell(5).innerHTML=item.profit || 0;
+
+
+
+});
+
+
+
+}
+//============================================
+// TRANSACTION TABLE BUTTON
+//============================================
+
+
+const transactionBtn=document.getElementById("transactionBtn");
+
+
+if(transactionBtn){
+
+
+transactionBtn.addEventListener("click",()=>{
+
+
+let box=document.getElementById("transactionSection");
+
+
+if(box.style.display==="block"){
+
+
+box.style.display="none";
+
+
+}else{
+
+
+box.style.display="block";
+
+
+loadTransactionTable();
+
+
+}
+
+
+});
+
+
+}
 
 });
 
 }
+//============================================
+// ADD TRANSACTION TO TABLE
+//============================================
 
+function addTransaction(category,buy,sale,profit){
+
+let tbody=document.getElementById("transactionBody");
+
+if(!tbody){
+    return;
+}
+
+
+let row=tbody.insertRow();
+
+
+row.insertCell(0).innerHTML =
+tbody.rows.length;
+
+
+row.insertCell(1).innerHTML =
+new Date().toLocaleString();
+
+
+row.insertCell(2).innerHTML =
+category;
+
+
+row.insertCell(3).innerHTML =
+buy;
+
+
+row.insertCell(4).innerHTML =
+sale;
+
+
+row.insertCell(5).innerHTML =
+profit;
+
+
+
+}
 
 
 //=============================
@@ -553,7 +682,41 @@ link.click();
 
 }
 
+//============================================
+// CLEAR DASHBOARD BUTTON
+//============================================
 
+
+const clearBtn=document.getElementById("clearBtn");
+
+
+if(clearBtn){
+
+
+clearBtn.addEventListener("click",()=>{
+
+
+let confirmDelete =
+confirm("সব Dashboard Data Delete করবেন?");
+
+
+if(confirmDelete){
+
+
+localStorage.removeItem("ssTelecom");
+
+
+location.reload();
+
+
+}
+
+
+
+});
+
+
+}
 
 //=============================
 // RESET FUNCTION
