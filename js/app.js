@@ -146,7 +146,6 @@ updateDashboard();
 // SAVE SYSTEM
 //=====================================================
 
-
 //=====================================
 // FLEXI LOAD SAVE
 //=====================================
@@ -169,6 +168,23 @@ let total = gp+robi+bl+airtel;
 
 data.easyload += total;
 
+
+// =============================
+// Transaction Table
+// =============================
+
+addTransaction(
+"Flexi Load",
+total,
+0,
+0
+);
+
+
+// =============================
+// Save Transaction
+// =============================
+
 data.transactions.push({
 
 type:"Flexi Load",
@@ -186,6 +202,22 @@ total:total,
 date:new Date().toLocaleString()
 
 });
+
+document.getElementById("gpBalance").value="";
+
+document.getElementById("robiBalance").value="";
+
+document.getElementById("blBalance").value="";
+
+document.getElementById("airtelBalance").value="";
+
+saveData();
+
+updateDashboard();
+
+});
+
+}
 
 document.getElementById("gpBalance").value="";
 
@@ -227,6 +259,23 @@ let total=bkash+nagad+rocket+upay;
 
 data.mobileBanking+=total;
 
+
+//=============================
+// Transaction Table
+//=============================
+
+addTransaction(
+"Mobile Banking",
+total,
+0,
+0
+);
+
+
+//=============================
+// Save Transaction
+//=============================
+
 data.transactions.push({
 
 type:"Mobile Banking",
@@ -260,11 +309,26 @@ updateDashboard();
 });
 
 }
+
+document.getElementById("bkashBalance").value="";
+
+document.getElementById("nagadBalance").value="";
+
+document.getElementById("rocketBalance").value="";
+
+document.getElementById("upayBalance").value="";
+
+saveData();
+
+updateDashboard();
+
+});
+
+}
 //=====================================================
 // APP.JS (PART-3)
 // PRODUCT | CARD | BARBARIZE
 //=====================================================
-
 
 //=====================================
 // PRODUCT SAVE
@@ -294,7 +358,22 @@ data.monthlyProfit+=profit;
 
 data.totalSales+=sale;
 
-// Transaction
+
+//=============================
+// Transaction Table
+//=============================
+
+addTransaction(
+"Product",
+buy,
+sale,
+profit
+);
+
+
+//=============================
+// Save Transaction
+//=============================
 
 data.transactions.push({
 
@@ -310,6 +389,19 @@ date:new Date().toLocaleString()
 
 });
 
+document.getElementById("productBuyInput").value="";
+
+document.getElementById("productSaleInput").value="";
+
+document.getElementById("productProfit").innerHTML="0";
+
+saveData();
+
+updateDashboard();
+
+});
+
+}
 // Clear
 
 document.getElementById("productBuyInput").value="";
@@ -348,7 +440,22 @@ data.cardBuy+=buy;
 
 data.cardSale+=sale;
 
-// Transaction
+
+//=============================
+// Transaction Table
+//=============================
+
+addTransaction(
+"Card",
+buy,
+sale,
+0
+);
+
+
+//=============================
+// Save Transaction
+//=============================
 
 data.transactions.push({
 
@@ -364,6 +471,19 @@ date:new Date().toLocaleString()
 
 });
 
+document.getElementById("cardBuyInput").value="";
+
+document.getElementById("cardSaleInput").value="";
+
+document.getElementById("cardCurrentStock").innerHTML="0";
+
+saveData();
+
+updateDashboard();
+
+});
+
+}
 // Clear
 
 document.getElementById("cardBuyInput").value="";
@@ -410,7 +530,22 @@ data.monthlyProfit+=profit;
 
 data.totalSales+=sale;
 
-// Transaction
+
+//=============================
+// Transaction Table
+//=============================
+
+addTransaction(
+"Barbarize",
+buy,
+sale,
+profit
+);
+
+
+//=============================
+// Save Transaction
+//=============================
 
 data.transactions.push({
 
@@ -425,6 +560,20 @@ profit:profit,
 date:new Date().toLocaleString()
 
 });
+
+document.getElementById("barbarizeBuyInput").value="";
+
+document.getElementById("barbarizeSaleInput").value="";
+
+document.getElementById("barbarizeProfit").innerHTML="0";
+
+saveData();
+
+updateDashboard();
+
+});
+
+}
 
 // Clear
 
