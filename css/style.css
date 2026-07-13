@@ -484,3 +484,38 @@ h1,h2,p{
     margin:0;
 
 }
+/*==============================
+     SECTION SAVE BUTTON
+==============================*/
+
+.saveArea{
+
+    width:180px;
+    text-align:center;
+    vertical-align:middle;
+    background:#F3F3F3;
+
+}
+
+.sectionSave{
+
+    width:120px;
+    height:45px;
+
+    background:#1F4E79;
+    color:#fff;
+
+    border:2px solid #000;
+
+    font-size:17px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+.sectionSave:hover{
+
+    background:#2F75B5;
+
+}
