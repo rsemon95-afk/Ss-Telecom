@@ -16,77 +16,88 @@
 
 <div class="container">
 
-<!--========================
-      HEADER
-=========================-->
+<!-- ===========================
+        HEADER
+============================ -->
 
 <div class="header">
 
-<div class="logoBox">
+    <!-- Logo -->
 
-<img src="assets/logo.png" alt="Logo">
+    <div class="logo-box">
+
+        <img src="assets/logo.png" alt="Logo">
+
+    </div>
+
+
+    <!-- Shop Title -->
+
+    <div class="title-box">
+
+        <h1>SS TELECOM</h1>
+
+        <h2>SHOP MANAGEMENT SYSTEM</h2>
+
+    </div>
+
+
+    <!-- Time & Date -->
+
+    <div class="header-right">
+
+        <div class="time-box">
+
+            <div class="box-title">
+
+                TIME
+
+            </div>
+
+            <div id="liveTime">
+
+                00:00:00
+
+            </div>
+
+        </div>
+
+        <div class="date-box">
+
+            <div class="box-title">
+
+                DATE
+
+            </div>
+
+            <div id="liveDate">
+
+                00/00/0000
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
-<div class="titleBox">
 
-<h1>SS TELECOM</h1>
+<!-- ===========================
+      DASHBOARD ROW - 1
+============================ -->
 
-<h3>SHOP MANAGEMENT SYSTEM</h3>
+<div class="dashboard-row">
 
-</div>
+<div class="dashboard-box">
 
-<div class="topBox">
+<div class="dashboard-header">
 
-<div class="timeBox">
-
-<div class="head">
-TIME
-</div>
-
-<div id="liveTime">
-
-00:00:00
-
-</div>
-
-</div>
-
-<div class="dateBox">
-
-<div class="head">
-DATE
-</div>
-
-<div id="liveDate">
-
-00/00/0000
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!--========================
-    DASHBOARD
-=========================-->
-
-<div class="dashboard">
-
-
-
-<div class="dash">
-
-<div class="dashHead">
 Stock Balance
+
 </div>
 
-<div class="dashValue"
-id="stockBalance">
+<div class="dashboard-value" id="stockBalance">
 
 0
 
@@ -96,14 +107,15 @@ id="stockBalance">
 
 
 
-<div class="dash">
+<div class="dashboard-box">
 
-<div class="dashHead">
+<div class="dashboard-header">
+
 Total Sales
+
 </div>
 
-<div class="dashValue"
-id="totalSales">
+<div class="dashboard-value" id="totalSales">
 
 0
 
@@ -113,14 +125,15 @@ id="totalSales">
 
 
 
-<div class="dash">
+<div class="dashboard-box">
 
-<div class="dashHead">
+<div class="dashboard-header">
+
 Easyload Stock
+
 </div>
 
-<div class="dashValue"
-id="easyloadStock">
+<div class="dashboard-value" id="easyloadStock">
 
 0
 
@@ -130,14 +143,15 @@ id="easyloadStock">
 
 
 
-<div class="dash">
+<div class="dashboard-box">
 
-<div class="dashHead">
+<div class="dashboard-header">
+
 Daily Profit
+
 </div>
 
-<div class="dashValue"
-id="dailyProfit">
+<div class="dashboard-value" id="dailyProfit">
 
 0
 
@@ -147,14 +161,15 @@ id="dailyProfit">
 
 
 
-<div class="dash">
+<div class="dashboard-box">
 
-<div class="dashHead">
+<div class="dashboard-header">
+
 Product Buy
+
 </div>
 
-<div class="dashValue"
-id="productBuy">
+<div class="dashboard-value" id="productBuy">
 
 0
 
@@ -164,117 +179,15 @@ id="productBuy">
 
 
 
-<div class="dash">
+<div class="dashboard-box">
 
-<div class="dashHead">
+<div class="dashboard-header">
+
 Monthly Profit
-</div>
-
-<div class="dashValue"
-id="monthlyProfit">
-
-0
 
 </div>
 
-</div>
-
-
-
-
-<div class="dash">
-
-<div class="dashHead">
-Product Sale
-</div>
-
-<div class="dashValue"
-id="productSale">
-
-0
-
-</div>
-
-</div>
-
-
-
-<div class="dash">
-
-<div class="dashHead">
-Barbarize Buy
-</div>
-
-<div class="dashValue"
-id="barbarizeBuy">
-
-0
-
-</div>
-
-</div>
-
-
-
-<div class="dash">
-
-<div class="dashHead">
-Barbarize Sale
-</div>
-
-<div class="dashValue"
-id="barbarizeSale">
-
-0
-
-</div>
-
-</div>
-
-
-
-<div class="dash">
-
-<div class="dashHead">
-Card QYT Stock
-</div>
-
-<div class="dashValue"
-id="cardStock">
-
-0
-
-</div>
-
-</div>
-
-
-
-<div class="dash">
-
-<div class="dashHead">
-Profit / Loss
-</div>
-
-<div class="dashValue"
-id="profitLoss">
-
-0
-
-</div>
-
-</div>
-
-
-
-<div class="dash">
-
-<div class="dashHead">
-Current Assets
-</div>
-
-<div class="dashValue"
-id="currentAssets">
+<div class="dashboard-value" id="monthlyProfit">
 
 0
 
@@ -283,27 +196,281 @@ id="currentAssets">
 </div>
 
 </div>
+<!-- =========================================
+        DASHBOARD ROW - 2
+========================================== -->
 
-<!-- Phase 3.2 থেকে নিচে শুরু হবে
+<div class="dashboard-row">
 
-Flexiload
+    <div class="dashboard-box">
 
-Mobile Banking
+        <div class="dashboard-header">
+            Product Sale
+        </div>
 
-Product
+        <div class="dashboard-value" id="productSale">
+            0
+        </div>
 
-Card
+    </div>
 
-Barbarize
 
-Transaction
+    <div class="dashboard-box">
 
-Backup
+        <div class="dashboard-header">
+            Barbarize Buy
+        </div>
 
--->
+        <div class="dashboard-value" id="barbarizeBuy">
+            0
+        </div>
 
-<script type="module" src="js/app.js"></script>
+    </div>
 
-</body>
 
-</html>
+    <div class="dashboard-box">
+
+        <div class="dashboard-header">
+            Barbarize Sale
+        </div>
+
+        <div class="dashboard-value" id="barbarizeSale">
+            0
+        </div>
+
+    </div>
+
+
+    <div class="dashboard-box">
+
+        <div class="dashboard-header">
+            Card QYT Stock
+        </div>
+
+        <div class="dashboard-value" id="cardStock">
+            0
+        </div>
+
+    </div>
+
+
+    <div class="dashboard-box">
+
+        <div class="dashboard-header">
+            Profit / Loss
+        </div>
+
+        <div class="dashboard-value" id="profitLoss">
+            0
+        </div>
+
+    </div>
+
+
+    <div class="dashboard-box">
+
+        <div class="dashboard-header">
+            Current Assets
+        </div>
+
+        <div class="dashboard-value" id="currentAssets">
+            0
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+            FLEXI LOAD
+========================================== -->
+
+<div class="main-section">
+
+    <div class="section-header">
+
+        FLEXI LOAD
+
+    </div>
+
+
+    <div class="section-grid">
+
+        <div class="input-card">
+
+            <div class="input-title">
+
+                GP Balance
+
+            </div>
+
+            <input
+            type="number"
+            id="gpBalance"
+            placeholder="0">
+
+        </div>
+
+
+        <div class="input-card">
+
+            <div class="input-title">
+
+                Robi Balance
+
+            </div>
+
+            <input
+            type="number"
+            id="robiBalance"
+            placeholder="0">
+
+        </div>
+
+
+        <div class="input-card">
+
+            <div class="input-title">
+
+                Banglalink Balance
+
+            </div>
+
+            <input
+            type="number"
+            id="blBalance"
+            placeholder="0">
+
+        </div>
+
+
+        <div class="input-card">
+
+            <div class="input-title">
+
+                Airtel Balance
+
+            </div>
+
+            <input
+            type="number"
+            id="airtelBalance"
+            placeholder="0">
+
+        </div>
+
+    </div>
+
+
+    <div class="save-area">
+
+        <button id="saveEasyload">
+
+            SAVE EASYLOAD
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+        MOBILE BANKING
+========================================== -->
+
+<div class="main-section">
+
+    <div class="section-header">
+
+        MOBILE BANKING
+
+    </div>
+
+
+    <div class="section-grid">
+
+        <div class="input-card">
+
+            <div class="input-title">
+
+                bKash Balance
+
+            </div>
+
+            <input
+            type="number"
+            id="bkashBalance"
+            placeholder="0">
+
+        </div>
+
+
+        <div class="input-card">
+
+            <div class="input-title">
+
+                Nagad Balance
+
+            </div>
+
+            <input
+            type="number"
+            id="nagadBalance"
+            placeholder="0">
+
+        </div>
+
+
+        <div class="input-card">
+
+            <div class="input-title">
+
+                Rocket Balance
+
+            </div>
+
+            <input
+            type="number"
+            id="rocketBalance"
+            placeholder="0">
+
+        </div>
+
+
+        <div class="input-card">
+
+            <div class="input-title">
+
+                Upay Balance
+
+            </div>
+
+            <input
+            type="number"
+            id="upayBalance"
+            placeholder="0">
+
+        </div>
+
+    </div>
+
+
+    <div class="save-area">
+
+        <button id="saveBanking">
+
+            SAVE MOBILE BANKING
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Part-3 থেকে Product, Card, Barbarize, Opening Amount,
+Transaction ও Backup শুরু হবে -->
+<!-- Part-2 থেকে Dashboard Row-2 শুরু হবে -->
