@@ -1,403 +1,486 @@
-/* =====================================
-   SS TELECOM EXCEL PREMIUM STYLE
-===================================== */
-
+/*==================================
+    SS TELECOM - EXCEL STYLE
+==================================*/
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Calibri, Arial, sans-serif;
 }
-
 
 body{
 
-    background:#d9e2f3;
-
-    padding:20px;
-
-}
-
-
-
-.sheet{
-
-    width:100%;
-
-    max-width:1400px;
-
-    margin:auto;
-
-    background:white;
-
-    border:2px solid #333;
-
+    background:#bfbfbf;
     padding:10px;
 
 }
 
+.software{
 
+    width:1366px;
+    margin:auto;
 
+    background:#efefef;
 
+    border:2px solid #000;
 
-
-
-/* HEADER */
-
-.title-box{
-
-    text-align:center;
-
-    border:2px solid #333;
-
-    background:#1f4e78;
-
-    color:white;
-
-    padding:15px;
-
-    margin-bottom:10px;
+    padding:8px;
 
 }
 
 
-.title-box h1{
+/*==================================
+        HEADER TABLE
+==================================*/
 
-    font-size:28px;
+.headerTable{
 
-}
+    width:100%;
 
+    border-collapse:collapse;
 
-
-.title-box p{
-
-    margin-top:5px;
-
-}
-
-
-
-
-
-
-
-/* SECTION */
-
-.section{
+    table-layout:fixed;
 
     margin-bottom:12px;
 
 }
 
+.headerTable td{
+
+    border:2px solid #000;
+
+    text-align:center;
+
+    vertical-align:middle;
+
+}
 
 
-.section-head{
+/* Logo */
 
-    background:#4472c4;
+.logoCell{
 
-    color:white;
+    width:120px;
+    height:90px;
+
+    background:#ffffff;
+
+    font-weight:bold;
+
+}
+
+
+/* Title */
+
+.titleCell{
+
+    background:#d9e2f3;
+
+}
+
+.titleCell h1{
+
+    font-size:34px;
+
+    color:#003366;
+
+    margin-bottom:5px;
+
+}
+
+.titleCell p{
 
     font-size:18px;
 
     font-weight:bold;
 
-    padding:8px 10px;
+}
 
-    border:1px solid #333;
+
+/* Time Date */
+
+.smallHead{
+
+    width:140px;
+
+    background:#4f81bd;
+
+    color:#fff;
+
+    font-weight:bold;
+
+    height:35px;
+
+}
+
+#liveTime,
+#liveDate{
+
+    background:#fff;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    height:55px;
 
 }
 
 
+/*==================================
+        DASHBOARD TABLE
+==================================*/
 
+.dashboardTable{
 
+    width:100%;
 
+    border-collapse:collapse;
 
+    table-layout:fixed;
 
+    margin-top:10px;
 
-/* 4 COLUMN */
-
-.grid-4{
-
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:0;
+    margin-bottom:20px;
 
 }
 
+.dashboardTable th{
 
+    border:2px solid #000;
 
-.cell{
+    background:#4f81bd;
 
-    border:1px solid #333;
+    color:#fff;
 
-    height:90px;
+    height:38px;
+
+    font-size:15px;
+
+}
+
+.dashboardTable td{
+
+    border:2px solid #000;
+
+    background:#fff;
 
     text-align:center;
 
-}
+    height:65px;
 
-
-
-.cell-title{
-
-    background:#d9eaf7;
-
-    border-bottom:1px solid #333;
-
-    padding:8px;
+    font-size:30px;
 
     font-weight:bold;
 
+    color:#006600;
+
 }
+/*==================================
+      SECTION TITLE
+==================================*/
 
+.sectionTitle{
 
+    width:100%;
+    height:38px;
 
-.cell-value{
+    background:#1F4E79;
 
-    padding:18px;
+    color:#ffffff;
 
-    font-size:22px;
+    border:2px solid #000;
+
+    font-size:18px;
 
     font-weight:bold;
-
-    color:#008000;
-
-}
-
-
-
-
-
-
-
-
-/* TWO COLUMN */
-
-.grid-2{
-
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:0;
-
-
-}
-
-
-
-
-.form-box{
-
-
-    border:1px solid #333;
-
-    padding:12px;
-
-}
-
-
-
-.form-box h3{
-
 
     text-align:center;
 
-    background:#e2f0d9;
+    line-height:34px;
 
-    border:1px solid #333;
-
-    padding:8px;
-
-    margin-bottom:10px;
-
-    color:#1f4e78;
+    margin:15px 0 5px 0;
 
 }
 
 
+/*==================================
+        ENTRY TABLE
+==================================*/
 
+.entryTable{
 
+    width:100%;
 
+    border-collapse:collapse;
 
-/* INPUT */
+    table-layout:fixed;
 
+    margin-bottom:15px;
 
-.form-box label{
+    background:#ffffff;
 
-    display:block;
+}
+
+.entryTable th{
+
+    height:35px;
+
+    background:#D9EAD3;
+
+    color:#000;
+
+    border:2px solid #000;
+
+    font-size:15px;
 
     font-weight:bold;
 
-    margin-top:7px;
+}
+
+.entryTable td{
+
+    height:45px;
+
+    border:2px solid #000;
+
+    background:#ffffff;
+
+    padding:4px 8px;
+
+    font-size:15px;
 
 }
 
 
+/*==================================
+            INPUT
+==================================*/
 
-.form-box input{
-
+.entryTable input{
 
     width:100%;
 
     height:32px;
 
-    border:1px solid #555;
+    border:1px solid #666;
 
-    padding:5px;
+    background:#FFFDEB;
 
-    margin-top:3px;
+    padding:5px 8px;
 
+    font-size:16px;
+
+    text-align:right;
+
+    outline:none;
+
+}
+
+.entryTable input:focus{
+
+    border:2px solid #1F4E79;
+
+    background:#ffffff;
 
 }
 
 
+/*==================================
+            BUTTON
+==================================*/
 
-.form-box input:focus{
-
-    outline:2px solid #4472c4;
-
-}
-
-
-
-
-
-
-
-/* BUTTON */
-
-
-button{
-
+.entryTable button{
 
     width:100%;
 
-    height:35px;
+    height:32px;
 
-    margin-top:12px;
+    border:1px solid #000;
 
-    border:1px solid #333;
+    background:#70AD47;
 
-    background:#70ad47;
+    color:#fff;
 
-    color:white;
+    font-size:14px;
 
     font-weight:bold;
 
     cursor:pointer;
 
-
 }
 
-
-button:hover{
+.entryTable button:hover{
 
     background:#548235;
 
 }
 
 
+/*==================================
+      VALUE CELL
+==================================*/
 
-
-
-
-
-/* TABLE */
-
-
-table{
-
-
-    width:100%;
-
-    border-collapse:collapse;
-
-
-}
-
-
-
-th{
-
-
-    background:#4472c4;
-
-    color:white;
-
-    border:1px solid #333;
-
-    padding:8px;
-
-}
-
-
-
-td{
-
-
-    border:1px solid #333;
-
-    padding:8px;
+#productProfit,
+#cardCurrentStock,
+#barbarizeProfit,
+#currentAssetValue,
+#profitLossValue{
 
     text-align:center;
 
-}
+    font-size:18px;
 
+    font-weight:bold;
 
-
-tr:nth-child(even){
-
-    background:#f2f2f2;
+    color:#006600;
 
 }
 
 
+/*==================================
+      ROW HOVER
+==================================*/
 
+.entryTable tr:hover td{
 
+    background:#F2F2F2;
 
+}
+/*=========================================
+        PRODUCT / CARD / SYSTEM
+=========================================*/
 
+.systemTable{
 
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+    margin-top:15px;
+    margin-bottom:20px;
 
-/* RESPONSIVE */
+}
 
+.systemTable td{
 
-@media(max-width:900px){
+    border:2px solid #000;
+    background:#ffffff;
+    height:42px;
+    padding:6px 10px;
+    font-size:15px;
 
+}
 
-.grid-4{
+.systemTable td:first-child{
 
-    grid-template-columns:repeat(2,1fr);
+    width:260px;
+    background:#D9EAD3;
+    font-weight:bold;
+
+}
+
+.systemTable input{
+
+    width:100%;
+    height:30px;
+    border:1px solid #777;
+    background:#FFFDEB;
+    text-align:right;
+    padding-right:10px;
+    font-size:16px;
+    outline:none;
+
+}
+
+.systemTable input:focus{
+
+    border:2px solid #1F4E79;
+    background:#ffffff;
 
 }
 
 
-}
+/*=========================================
+            BUTTON AREA
+=========================================*/
 
+.buttonArea{
 
-
-@media(max-width:600px){
-
-
-.grid-4,
-.grid-2{
-
-    grid-template-columns:1fr;
-
-}
-
-
-
-body{
-
-    padding:5px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin:20px 0;
 
 }
 
+.buttonArea button{
+
+    width:220px;
+    height:42px;
+
+    border:2px solid #000;
+
+    background:#1F4E79;
+
+    color:#ffffff;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+.buttonArea button:hover{
+
+    background:#2F75B5;
+
+}
+
+
+/*=========================================
+            FOOTER
+=========================================*/
+
+.footer{
+
+    border-top:2px solid #000;
+    margin-top:15px;
+    padding:10px;
+    text-align:center;
+    font-size:14px;
+    font-weight:bold;
+    color:#333;
+
+}
+
+
+/*=========================================
+        EXCEL LOOK
+=========================================*/
+
+table{
+
+    box-shadow:none;
+
+}
+
+input{
+
+    border-radius:0;
+
+}
+
+button{
+
+    border-radius:0;
+
+}
+
+h1,h2,p{
+
+    margin:0;
 
 }
