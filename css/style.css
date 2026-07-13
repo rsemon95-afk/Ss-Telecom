@@ -919,3 +919,240 @@ body{
     padding-bottom:30px;
 
 }
+<!-- =========================================
+              PRODUCT
+========================================== -->
+
+<div class="main-section">
+
+    <div class="section-header">
+        PRODUCT
+    </div>
+
+    <div class="section-grid two-column">
+
+        <div class="input-card">
+
+            <div class="input-title">
+                Product Buy Amount
+            </div>
+
+            <input type="number"
+                   id="productBuyInput"
+                   placeholder="0">
+
+        </div>
+
+        <div class="input-card">
+
+            <div class="input-title">
+                Product Sale Amount
+            </div>
+
+            <input type="number"
+                   id="productSaleInput"
+                   placeholder="0">
+
+        </div>
+
+    </div>
+
+    <div class="save-area">
+
+        <button id="saveProduct">
+
+            SAVE PRODUCT
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+                CARD
+========================================== -->
+
+<div class="main-section">
+
+    <div class="section-header">
+
+        CARD
+
+    </div>
+
+    <div class="section-grid one-column">
+
+        <div class="input-card">
+
+            <div class="input-title">
+
+                Card Balance
+
+            </div>
+
+            <input type="number"
+                   id="cardBalance"
+                   placeholder="0">
+
+        </div>
+
+    </div>
+
+    <div class="save-area">
+
+        <button id="saveCard">
+
+            SAVE CARD
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+             BARBARIZE
+========================================== -->
+
+<div class="main-section">
+
+    <div class="section-header">
+
+        BARBARIZE
+
+    </div>
+
+    <div class="section-grid two-column">
+
+        <div class="input-card">
+
+            <div class="input-title">
+
+                Barbarize Buy
+
+            </div>
+
+            <input type="number"
+                   id="barbarizeBuyInput"
+                   placeholder="0">
+
+        </div>
+
+        <div class="input-card">
+
+            <div class="input-title">
+
+                Barbarize Sale
+
+            </div>
+
+            <input type="number"
+                   id="barbarizeSaleInput"
+                   placeholder="0">
+
+        </div>
+
+    </div>
+
+    <div class="save-area">
+
+        <button id="saveBarbarize">
+
+            SAVE BARBARIZE
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+        OPENING FIXED AMOUNT
+========================================== -->
+
+<div class="main-section">
+
+    <div class="section-header">
+
+        OPENING AMOUNT
+
+    </div>
+
+    <div class="section-grid one-column">
+
+        <div class="input-card">
+
+            <div class="input-title">
+
+                Fixed Amount
+
+            </div>
+
+            <input type="number"
+                   id="openingAmount"
+                   placeholder="30000">
+
+        </div>
+
+    </div>
+
+    <div class="save-area">
+
+        <button id="saveOpening">
+
+            SAVE OPENING AMOUNT
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+      SYSTEM BUTTON
+========================================== -->
+
+<div class="system-buttons">
+
+    <button id="transactionBtn">
+
+        📑 TRANSACTION HISTORY
+
+    </button>
+
+    <button id="backupBtn">
+
+        💾 BACKUP
+
+    </button>
+
+</div>
+
+
+<div class="footer">
+
+    <h3>
+
+        SS TELECOM PRO V1.0
+
+    </h3>
+
+    <p>
+
+        Shop Management System
+
+    </p>
+
+</div>
+
+</div>
+
+<script type="module" src="js/app.js"></script>
+
+</body>
+</html>
