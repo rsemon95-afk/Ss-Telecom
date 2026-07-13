@@ -1,307 +1,628 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<title>SS Telecom Account Sheet</title>
+<title>SS TELECOM</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
-
 <body>
 
+<div class="software">
 
-<div class="sheet">
+<table class="headerTable">
 
+<tr>
 
-<!-- HEADER -->
+<td class="logoCell" rowspan="2">
 
-<div class="title-box">
+LOGO
+
+</td>
+
+<td class="titleCell" rowspan="2">
 
 <h1>SS TELECOM</h1>
 
-<p>Daily Business Accounting Sheet</p>
+<p>SHOP MANAGEMENT SYSTEM</p>
 
-</div>
+</td>
 
+<td class="smallHead">
 
+TIME
 
+</td>
 
+<td class="smallHead">
 
-<!-- SUMMARY -->
+DATE
 
-<div class="section">
-
-<div class="section-head">
-Daily Summary
-</div>
-
-
-<div class="grid-4">
-
-
-<div class="cell">
-<div class="cell-title">Total Stock</div>
-<div class="cell-value">৳ 0</div>
-</div>
-
-
-
-<div class="cell">
-<div class="cell-title">Today's Sale</div>
-<div class="cell-value">৳ 0</div>
-</div>
-
-
-
-<div class="cell">
-<div class="cell-title">Profit</div>
-<div class="cell-value">৳ 0</div>
-</div>
-
-
-
-<div class="cell">
-<div class="cell-title">Cash</div>
-<div class="cell-value">৳ 0</div>
-</div>
-
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<!-- FLEXI + BANK -->
-
-<div class="section">
-
-<div class="section-head">
-Transaction Entry
-</div>
-
-
-
-<div class="grid-2">
-
-
-
-<div class="form-box">
-
-
-<h3>Flexiload</h3>
-
-
-<label>GP</label>
-<input type="number">
-
-
-<label>Robi</label>
-<input type="number">
-
-
-<label>Banglalink</label>
-<input type="number">
-
-
-<label>Airtel</label>
-<input type="number">
-
-
-<button>
-Save Flexiload
-</button>
-
-
-</div>
-
-
-
-
-
-<div class="form-box">
-
-
-<h3>Mobile Banking</h3>
-
-
-<label>bKash</label>
-<input type="number">
-
-
-<label>Nagad</label>
-<input type="number">
-
-
-<label>Rocket</label>
-<input type="number">
-
-
-<label>Upay</label>
-<input type="number">
-
-
-<button>
-Save Banking
-</button>
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<!-- PRODUCT -->
-
-<div class="section">
-
-
-<div class="section-head">
-Product Account
-</div>
-
-
-
-<div class="grid-2">
-
-
-
-<div class="form-box">
-
-
-<h3>Product Sale</h3>
-
-
-<label>Product Name</label>
-<input type="text">
-
-
-<label>Quantity</label>
-<input type="number">
-
-
-<label>Sale Amount</label>
-<input type="number">
-
-
-<label>Profit</label>
-<input type="number">
-
-
-</div>
-
-
-
-
-
-<div class="form-box">
-
-
-<h3>Product Buy</h3>
-
-
-<label>Product Name</label>
-<input type="text">
-
-
-<label>Quantity</label>
-<input type="number">
-
-
-<label>Buy Amount</label>
-<input type="number">
-
-
-<label>Supplier</label>
-<input type="text">
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<!-- REPORT TABLE -->
-
-<div class="section">
-
-
-<div class="section-head">
-Daily Report
-</div>
-
-
-
-<table>
-
-
-<tr>
-
-<th>Date</th>
-<th>Type</th>
-<th>Description</th>
-<th>Amount</th>
-<th>Profit</th>
-<th>Loss</th>
+</td>
 
 </tr>
 
-
-
 <tr>
 
-<td>-</td>
-<td>-</td>
-<td>No Data</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
+<td id="liveTime">
+
+00:00:00
+
+</td>
+
+<td id="liveDate">
+
+00/00/0000
+
+</td>
 
 </tr>
-
 
 </table>
 
 
+
+<table class="dashboardTable">
+
+<tr>
+
+<th>Stock Balance</th>
+
+<th>Total Sales</th>
+
+<th>Easyload Stock</th>
+
+<th>Daily Profit</th>
+
+<th>Product Buy</th>
+
+<th>Monthly Profit</th>
+
+</tr>
+
+<tr>
+
+<td id="stockBalance">0</td>
+
+<td id="totalSales">0</td>
+
+<td id="easyloadStock">0</td>
+
+<td id="dailyProfit">0</td>
+
+<td id="productBuy">0</td>
+
+<td id="monthlyProfit">0</td>
+
+</tr>
+
+<tr>
+
+<th>Product Sale</th>
+
+<th>Barbarize Buy</th>
+
+<th>Barbarize Sale</th>
+
+<th>Card QYT Stock</th>
+
+<th>Profit / Loss</th>
+
+<th>Current Assets</th>
+
+</tr>
+
+<tr>
+
+<td id="productSale">0</td>
+
+<td id="barbarizeBuy">0</td>
+
+<td id="barbarizeSale">0</td>
+
+<td id="cardStock">0</td>
+
+<td id="profitLoss">0</td>
+
+<td id="currentAssets">0</td>
+
+</tr>
+
+</table>
+<!--=====================================
+            FLEXI LOAD
+======================================-->
+
+<h2 class="sectionTitle">FLEXI LOAD</h2>
+
+<table class="entryTable">
+
+<tr>
+
+<th width="250">Operator</th>
+
+<th width="250">Current Balance</th>
+
+<th width="150">Save</th>
+
+</tr>
+
+<tr>
+
+<td>GP</td>
+
+<td>
+
+<input type="number"
+id="gpBalance"
+placeholder="0">
+
+</td>
+
+<td>
+
+<button id="saveGP">
+
+Save
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Robi</td>
+
+<td>
+
+<input type="number"
+id="robiBalance"
+placeholder="0">
+
+</td>
+
+<td>
+
+<button id="saveRobi">
+
+Save
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Banglalink</td>
+
+<td>
+
+<input type="number"
+id="blBalance"
+placeholder="0">
+
+</td>
+
+<td>
+
+<button id="saveBL">
+
+Save
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Airtel</td>
+
+<td>
+
+<input type="number"
+id="airtelBalance"
+placeholder="0">
+
+</td>
+
+<td>
+
+<button id="saveAirtel">
+
+Save
+
+</button>
+
+</td>
+
+</tr>
+
+</table>
+
+
+
+<!--=====================================
+        MOBILE BANKING
+======================================-->
+
+<h2 class="sectionTitle">
+
+MOBILE BANKING
+
+</h2>
+
+<table class="entryTable">
+
+<tr>
+
+<th width="250">
+
+Account
+
+</th>
+
+<th width="250">
+
+Current Balance
+
+</th>
+
+<th width="150">
+
+Save
+
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+
+bKash
+
+</td>
+
+<td>
+
+<input type="number"
+id="bkashBalance"
+placeholder="0">
+
+</td>
+
+<td>
+
+<button id="saveBkash">
+
+Save
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Nagad
+
+</td>
+
+<td>
+
+<input type="number"
+id="nagadBalance"
+placeholder="0">
+
+</td>
+
+<td>
+
+<button id="saveNagad">
+
+Save
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Rocket
+
+</td>
+
+<td>
+
+<input type="number"
+id="rocketBalance"
+placeholder="0">
+
+</td>
+
+<td>
+
+<button id="saveRocket">
+
+Save
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Upay
+
+</td>
+
+<td>
+
+<input type="number"
+id="upayBalance"
+placeholder="0">
+
+</td>
+
+<td>
+
+<button id="saveUpay">
+
+Save
+
+</button>
+
+</td>
+
+</tr>
+
+</table>
+<!-- =====================================
+            PRODUCT
+====================================== -->
+
+<h2 class="sectionTitle">PRODUCT</h2>
+
+<table class="entryTable">
+
+<tr>
+<th>Product Name</th>
+<th>Buy Amount</th>
+<th>Sale Amount</th>
+<th>Profit</th>
+</tr>
+
+<tr>
+<td>Product</td>
+
+<td>
+<input type="number" id="productBuyInput" placeholder="0">
+</td>
+
+<td>
+<input type="number" id="productSaleInput" placeholder="0">
+</td>
+
+<td id="productProfit">
+0
+</td>
+
+</tr>
+
+</table>
+
+
+
+<!-- =====================================
+                CARD
+====================================== -->
+
+<h2 class="sectionTitle">CARD</h2>
+
+<table class="entryTable">
+
+<tr>
+
+<th>Card Buy</th>
+<th>Card Sale</th>
+<th>Current Stock</th>
+
+</tr>
+
+<tr>
+
+<td>
+
+<input type="number"
+id="cardBuyInput"
+placeholder="0">
+
+</td>
+
+<td>
+
+<input type="number"
+id="cardSaleInput"
+placeholder="0">
+
+</td>
+
+<td id="cardCurrentStock">
+
+0
+
+</td>
+
+</tr>
+
+</table>
+
+
+
+<!-- =====================================
+            BARBARIZE
+====================================== -->
+
+<h2 class="sectionTitle">
+
+BARBARIZE
+
+</h2>
+
+<table class="entryTable">
+
+<tr>
+
+<th>Buy</th>
+<th>Sale</th>
+<th>Profit</th>
+
+</tr>
+
+<tr>
+
+<td>
+
+<input type="number"
+id="barbarizeBuyInput"
+placeholder="0">
+
+</td>
+
+<td>
+
+<input type="number"
+id="barbarizeSaleInput"
+placeholder="0">
+
+</td>
+
+<td id="barbarizeProfit">
+
+0
+
+</td>
+
+</tr>
+
+</table>
+
+
+
+<!-- =====================================
+        OPENING AMOUNT
+====================================== -->
+
+<h2 class="sectionTitle">
+
+SYSTEM
+
+</h2>
+
+<table class="entryTable">
+
+<tr>
+
+<td width="300">
+
+Opening Amount
+
+</td>
+
+<td>
+
+<input
+type="number"
+id="openingAmount"
+value="30000">
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Current Assets
+
+</td>
+
+<td id="currentAssetValue">
+
+0
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Profit / Loss
+
+</td>
+
+<td id="profitLossValue">
+
+0
+
+</td>
+
+</tr>
+
+</table>
+
+
+
+<!-- =====================================
+        SYSTEM BUTTON
+====================================== -->
+
+<div class="buttonArea">
+
+<button id="transactionBtn">
+
+Transaction History
+
+</button>
+
+<button id="backupBtn">
+
+Backup
+
+</button>
+
 </div>
 
 
 
-
-
 </div>
 
-
-<script src="app.js"></script>
+<script type="module" src="js/app.js"></script>
 
 </body>
 
