@@ -519,3 +519,50 @@ h1,h2,p{
     background:#2F75B5;
 
 }
+/*====================================
+        TRANSACTION HISTORY
+====================================*/
+
+.transactionBox{
+
+display:none;
+
+margin-top:25px;
+
+padding:20px;
+
+background:#ffffff;
+
+border:2px solid #444;
+
+border-radius:8px;
+
+}
+
+#transactionTable{
+
+width:100%;
+
+border-collapse:collapse;
+
+}
+
+#transactionTable th{
+
+background:#1F4E79;
+
+color:white;
+
+padding:10px;
+
+}
+
+#transactionTable td{
+
+border:1px solid #999;
+
+padding:8px;
+
+text-align:center;
+
+}
