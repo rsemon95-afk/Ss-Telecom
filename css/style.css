@@ -566,3 +566,162 @@ padding:8px;
 text-align:center;
 
 }
+/*====================================
+        CLEAR DASHBOARD BUTTON
+====================================*/
+
+#clearBtn{
+
+    background:#d9534f;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    margin-left:10px;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+#clearBtn:hover{
+
+    background:#b52b27;
+
+    transform:scale(1.05);
+
+}
+
+
+
+/*====================================
+        TRANSACTION HISTORY BOX
+====================================*/
+
+.transactionBox{
+
+    display:none;
+
+    margin-top:25px;
+
+    padding:20px;
+
+    background:#ffffff;
+
+    border:2px solid #1F4E79;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+}
+
+
+
+/* TITLE */
+
+.transactionBox h2{
+
+    text-align:center;
+
+    color:#1F4E79;
+
+    margin-bottom:20px;
+
+    font-size:22px;
+
+}
+
+
+
+/*====================================
+        TRANSACTION TABLE
+====================================*/
+
+
+#transactionTable{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+
+}
+
+
+
+#transactionTable th{
+
+    background:#1F4E79;
+
+    color:white;
+
+    padding:12px;
+
+    border:1px solid #ddd;
+
+    font-size:15px;
+
+}
+
+
+
+#transactionTable td{
+
+    padding:10px;
+
+    border:1px solid #ccc;
+
+    text-align:center;
+
+    font-size:14px;
+
+}
+
+
+
+/* ROW HOVER */
+
+#transactionTable tbody tr:hover{
+
+    background:#f1f7ff;
+
+}
+
+
+
+/*====================================
+        MOBILE RESPONSIVE
+====================================*/
+
+
+@media(max-width:700px){
+
+
+.transactionBox{
+
+    overflow-x:auto;
+
+}
+
+
+#transactionTable{
+
+    min-width:700px;
+
+}
+
+
+}
