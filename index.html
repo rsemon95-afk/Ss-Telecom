@@ -4,10 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SS Telecom Management System</title>
+<title>SS Telecom Account Sheet</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -17,85 +16,16 @@
 <body>
 
 
-<div class="container">
-
+<div class="sheet">
 
 
 <!-- HEADER -->
 
-<div class="header">
+<div class="title-box">
 
-<h1>SS Telecom Management System</h1>
+<h1>SS TELECOM</h1>
 
-<p>Daily Business Accounting Dashboard</p>
-
-</div>
-
-
-
-
-
-<!-- DASHBOARD -->
-
-
-<div class="section-title">
-Dashboard Summary
-</div>
-
-
-
-<div class="excel-row">
-
-
-<div class="box">
-
-<h3>Total Stock</h3>
-
-<div class="value">
-৳ 0
-</div>
-
-</div>
-
-
-
-<div class="box">
-
-<h3>Today's Sale</h3>
-
-<div class="value">
-৳ 0
-</div>
-
-</div>
-
-
-
-
-<div class="box">
-
-<h3>Today's Profit</h3>
-
-<div class="value profit">
-৳ 0
-</div>
-
-</div>
-
-
-
-
-<div class="box">
-
-<h3>Cash Balance</h3>
-
-<div class="value">
-৳ 0
-</div>
-
-</div>
-
-
+<p>Daily Business Accounting Sheet</p>
 
 </div>
 
@@ -103,92 +33,125 @@ Dashboard Summary
 
 
 
+<!-- SUMMARY -->
+
+<div class="section">
+
+<div class="section-head">
+Daily Summary
+</div>
 
 
-<!-- TRANSACTION -->
+<div class="grid-4">
 
 
-<div class="section-title">
-Daily Transaction
+<div class="cell">
+<div class="cell-title">Total Stock</div>
+<div class="cell-value">৳ 0</div>
+</div>
+
+
+
+<div class="cell">
+<div class="cell-title">Today's Sale</div>
+<div class="cell-value">৳ 0</div>
+</div>
+
+
+
+<div class="cell">
+<div class="cell-title">Profit</div>
+<div class="cell-value">৳ 0</div>
+</div>
+
+
+
+<div class="cell">
+<div class="cell-title">Cash</div>
+<div class="cell-value">৳ 0</div>
+</div>
+
+
+</div>
+
 </div>
 
 
 
 
-<div class="excel-table">
 
 
 
+<!-- FLEXI + BANK -->
+
+<div class="section">
+
+<div class="section-head">
+Transaction Entry
+</div>
 
 
-<!-- FLEXILOAD -->
 
-<div class="table-box">
+<div class="grid-2">
 
 
-<h2>Flexiload</h2>
+
+<div class="form-box">
+
+
+<h3>Flexiload</h3>
 
 
 <label>GP</label>
-<input type="number" placeholder="Amount">
+<input type="number">
 
 
 <label>Robi</label>
-<input type="number" placeholder="Amount">
+<input type="number">
 
 
 <label>Banglalink</label>
-<input type="number" placeholder="Amount">
+<input type="number">
 
 
 <label>Airtel</label>
-<input type="number" placeholder="Amount">
+<input type="number">
 
 
-
-<button id="saveEasyload">
+<button>
 Save Flexiload
 </button>
 
 
-
 </div>
 
 
 
 
 
-
-<!-- MOBILE BANKING -->
-
-
-<div class="table-box">
+<div class="form-box">
 
 
-<h2>Mobile Banking</h2>
+<h3>Mobile Banking</h3>
 
 
 <label>bKash</label>
-<input type="number" placeholder="Amount">
-
+<input type="number">
 
 
 <label>Nagad</label>
-<input type="number" placeholder="Amount">
-
+<input type="number">
 
 
 <label>Rocket</label>
-<input type="number" placeholder="Amount">
-
+<input type="number">
 
 
 <label>Upay</label>
-<input type="number" placeholder="Amount">
+<input type="number">
 
 
-
-<button id="saveBanking">
+<button>
 Save Banking
 </button>
 
@@ -196,6 +159,8 @@ Save Banking
 </div>
 
 
+
+</div>
 
 
 </div>
@@ -208,51 +173,39 @@ Save Banking
 
 <!-- PRODUCT -->
 
+<div class="section">
 
-<div class="section-title">
-Product Management
+
+<div class="section-head">
+Product Account
 </div>
 
 
 
-
-<div class="excel-table">
-
+<div class="grid-2">
 
 
-<div class="table-box">
+
+<div class="form-box">
 
 
-<h2>Product Sale</h2>
+<h3>Product Sale</h3>
 
 
 <label>Product Name</label>
-
 <input type="text">
 
 
-
 <label>Quantity</label>
-
 <input type="number">
-
 
 
 <label>Sale Amount</label>
-
 <input type="number">
-
 
 
 <label>Profit</label>
-
 <input type="number">
-
-
-
-<button>
-Save Sale
-</button>
 
 
 </div>
@@ -261,119 +214,32 @@ Save Sale
 
 
 
+<div class="form-box">
 
-<div class="table-box">
 
-
-<h2>Product Buy</h2>
+<h3>Product Buy</h3>
 
 
 <label>Product Name</label>
-
 <input type="text">
-
 
 
 <label>Quantity</label>
-
 <input type="number">
-
 
 
 <label>Buy Amount</label>
-
 <input type="number">
 
 
-
 <label>Supplier</label>
-
 <input type="text">
 
 
-
-<button>
-Save Buy
-</button>
-
-
 </div>
 
 
-
 </div>
-
-
-
-
-
-
-
-
-<!-- STOCK -->
-
-
-<div class="section-title">
-Stock & Assets
-</div>
-
-
-
-<div class="excel-row">
-
-
-
-<div class="box">
-
-<h3>Card Stock</h3>
-
-<div class="value">
-0 PCS
-</div>
-
-</div>
-
-
-
-
-<div class="box">
-
-<h3>SIM Stock</h3>
-
-<div class="value">
-0 PCS
-</div>
-
-</div>
-
-
-
-
-
-<div class="box">
-
-<h3>Accessories</h3>
-
-<div class="value">
-৳0
-</div>
-
-</div>
-
-
-
-
-
-<div class="box">
-
-<h3>Current Assets</h3>
-
-<div class="value">
-৳0
-</div>
-
-</div>
-
 
 
 </div>
@@ -384,179 +250,43 @@ Stock & Assets
 
 
 
+<!-- REPORT TABLE -->
 
-<!-- PROFIT LOSS -->
+<div class="section">
 
 
-<div class="section-title">
-Profit / Loss Report
+<div class="section-head">
+Daily Report
 </div>
 
-
-
-
-<div class="excel-table">
-
-
-
-<div class="table-box">
-
-
-<h2>Daily Report</h2>
-
-
-<label>Total Income</label>
-
-<input type="number" value="0">
-
-
-<label>Total Expense</label>
-
-<input type="number" value="0">
-
-
-<label>Net Profit</label>
-
-<input type="number" value="0">
-
-
-</div>
-
-
-
-
-
-<div class="table-box">
-
-
-<h2>Cash Summary</h2>
-
-
-<label>Cash In</label>
-
-<input type="number" value="0">
-
-
-
-<label>Cash Out</label>
-
-<input type="number" value="0">
-
-
-
-<label>Balance</label>
-
-<input type="number" value="0">
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-<!-- SEARCH -->
-
-
-<div class="section-title">
-Transaction History
-</div>
-
-
-
-
-<div class="search-area">
-
-
-<input type="date" id="searchDate">
-
-
-<button id="searchBtn">
-Search
-</button>
-
-
-<button id="printBtn">
-Print
-</button>
-
-
-</div>
-
-
-
-
-
-
-
-
-<!-- TABLE -->
-
-
-<div class="history-table">
 
 
 <table>
 
 
-<thead>
-
 <tr>
 
 <th>Date</th>
-
 <th>Type</th>
-
 <th>Description</th>
-
 <th>Amount</th>
-
 <th>Profit</th>
-
 <th>Loss</th>
-
-<th>Balance</th>
-
 
 </tr>
 
-</thead>
-
-
-
-<tbody id="historyData">
 
 
 <tr>
 
 <td>-</td>
-
 <td>-</td>
-
 <td>No Data</td>
-
 <td>0</td>
-
 <td>0</td>
-
 <td>0</td>
-
-<td>0</td>
-
 
 </tr>
-
-
-</tbody>
-
 
 
 </table>
@@ -568,98 +298,10 @@ Print
 
 
 
-
-
-
-<!-- FINAL SUMMARY -->
-
-
-<div class="section-title">
-Final Summary
 </div>
-
-
-
-
-<div class="excel-row">
-
-
-
-<div class="box">
-
-<h3>Total Sale</h3>
-
-<div class="value">
-৳0
-</div>
-
-</div>
-
-
-
-
-<div class="box">
-
-<h3>Total Buy</h3>
-
-<div class="value">
-৳0
-</div>
-
-</div>
-
-
-
-
-
-<div class="box">
-
-<h3>Total Profit</h3>
-
-<div class="value profit">
-৳0
-</div>
-
-</div>
-
-
-
-
-<div class="box">
-
-<h3>Total Loss</h3>
-
-<div class="value loss">
-৳0
-</div>
-
-</div>
-
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="footer">
-
-SS Telecom © 2026 | Business Management System
-
-</div>
-
-
-
-</div>
-
 
 
 <script src="app.js"></script>
-
 
 </body>
 
